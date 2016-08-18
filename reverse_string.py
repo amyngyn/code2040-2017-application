@@ -17,9 +17,6 @@ string = req.text  # get the string we want to reverse
 # - creates a copy of the string but in reverse order
 reversed_string = string[::-1]
 
-print('original string: {}'.format(string))
-print('reversed string: {}'.format(reversed_string))
-
 solution = {
     'token':token,
     'string':reversed_string
@@ -28,4 +25,4 @@ solution = {
 # make the post request to post request to send our solution
 solution_req = requests.post('http://challenge.code2040.org/api/reverse/validate', json=solution)
 
-print('response: {}'.format(solution_req.text))
+print('response: {}'.format(solution_req.text))  # print out whether we are complete or not

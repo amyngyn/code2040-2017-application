@@ -8,6 +8,7 @@ auth = {
     'github':'https://github.com/fadelakin/code2040-2017-application'
 }
 
+# make a post request to the api and include the auth dictionary as json in the body
 resp = requests.post('http://challenge.code2040.org/api/register', json=auth)
 
 print('Connected with API: {}'.format(resp.text))
